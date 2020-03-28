@@ -33,14 +33,14 @@ class Board:
         def __init__(self):
             "Create and setup board"
 
-            #Set it to black's turn, black goes first
+            # Set it to black's turn, black goes first
 
-            #Made from an array with empty spaces for the board
+            # Define the board as a list of arrays with values from 0-6
+            # Define the initial values for setup
 
-            #Place pieces into corresponding black squares for the end_game
+            # Place pieces into corresponding black squares for the end_game
 
-            #Create Textbox/area for messages and information to be displayed
-            pass
+            # Create Textbox/area for messages and information to be displayed
 
         def possible_moves(self, row, column):
             """Show possible moves on the board
@@ -52,24 +52,22 @@ class Board:
                 A list of possible moves available to the selected piece
             """
 
-            #Selects piece and decide what possible moves are available
+            # Selects piece and decide what possible moves are available
 
-            #Check for whose turn it is and if an opponents piece is selected
-            #return "Not your piece, please select a one of your pieces"
+            # Check for whose turn it is and if an opponents piece is selected
+            # return "Not your piece, please select a one of your pieces"
 
-            #Check for if the square is empty or outside the 8x8 range and
-            #return "No piece or outside of the board, please select on of your pieces"
+            # Check for if the square is empty or outside the 8x8 range and
+            # return "No piece or outside of the board, please select on of your pieces"
 
-            #Check to see if a normal checker piece or a queen for possible movements
+            # Check to see if a normal checker piece or a queen for possible movements
 
-            #Differneiate whether a capture or movement solely
+            # Differneiate whether a capture or movement solely
 
-            #Add a form to check for double+ jumps from capturing multiple Pieces
-            pass
+            # Add a form to check for double+ jumps from capturing multiple Pieces
 
         def captured_pieces(self):
             "Create a callable list to keep track of captured pieces"
-            pass
 
         def move(self, start_row, start_column, end_row, end_column):
             """Intiate possible moves
