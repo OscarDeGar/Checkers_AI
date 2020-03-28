@@ -56,7 +56,7 @@ class CheckersMain:
         "Ends turn of the player and switches player"
 
         pass
-        
+
 
 if __name__ == "__main__":
     MainWindow = CheckersMain()
