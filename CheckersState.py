@@ -20,6 +20,12 @@ black_pieces = [black_piece, black_king]
 class Board:
         """
         Represents the state of a checkers board and positions of pieces.
+        
+        Checks if the piece you selected is your piece. If it is, it will compare your move
+        attempt to the legal spaces you can move to. After a turn, it will allow you to move the 
+        same piece a second turn (by showing a message) if you have the ability to capture a 
+        second piece. Clicking on an empty part of the board will skip this bonus turn. If your move
+        attempt is not legal, the game will not move the piece and show a message indicating the reason.
 
         Attributes:
             turns: indidcate what players turn it is
@@ -31,7 +37,9 @@ class Board:
         """
 
         def __init__(self):
-            "Create and setup board"
+            """
+            Create and setup board
+            """
 
             # Set it to black's turn, black goes first
 
@@ -43,7 +51,8 @@ class Board:
             # Create Textbox/area for messages and information to be displayed
 
         def possible_moves(self, row, column):
-            """Show possible moves on the board
+            """
+            Show possible moves on the board
 
             Args:
                 row: which row is the piece located(0-7)
@@ -67,10 +76,15 @@ class Board:
             # Add a form to check for double+ jumps from capturing multiple Pieces
 
         def captured_pieces(self):
-            "Create a callable list to keep track of captured pieces"
+            """
+            Create a callable list to keep track of captured pieces
+            
+            A list will be made for each player.
+            """
 
         def move(self, start_row, start_column, end_row, end_column):
-            """Intiate possible moves
+            """
+            Compares the inputted moves to the legal moves of the selected piece
 
             Args:
                 start_row: indicate starting row of the piece(0-7)
@@ -79,14 +93,14 @@ class Board:
                 end_column: indicate ending column of the piece(0-7)
             Returns:
                 if a valid move return "move completed, (start_row,start_column) to (end_row, end_column)"
-                if a piece is captured also return "Piece captured at (c_piece_row,c_piece_column)"
-                if an invalid move return "move cannot be completed, invalid"
+                if a piece is captured also return "piece captured at (c_piece_row,c_piece_column)"
+                if an invalid move return "invalid move"
             """
-            #Check first to see if a valid move is being presented
+            # Check first to see if a valid move is being presented
 
-            #If valid move is presented move piece to final location
+            # If valid move is presented move piece to final location
 
-            #Check if in that movement a piece was captured by using
-            #nature od 2 diagonal spaces were hopped to checker
+            # Check if in that movement a piece was captured by using
+            # nature od 2 diagonal spaces were hopped to checker
 
-            #If piece was captured make space empty and add to counter of captured pieces
+            # If piece was captured make space empty and add to counter of captured pieces
