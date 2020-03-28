@@ -9,62 +9,55 @@ By: Oscar De La Garza & Yehya Albakri
 import os, sys
 import pygame
 from pygame.locals import*
+import CheckersView
+import CheckersState
 
-pygame.init()
- 
-def update(dt):
-  """
-  Update game. Called once per frame.
-  dt is the amount of time passed since last frame.
-  If you want to have constant apparent movement no matter your framerate,
-  what you can do is something like
-  
-  x += v * dt
-  
-  and this will scale your velocity based on time. Extend as necessary."""
-  
-  # Go through events that are passed to the script by the window.
-  for event in pygame.event.get():
-    # We need to handle these events. Initially the only one you'll want to care
-    # about is the QUIT event, because if you don't handle it, your game will crash
-    # whenever someone tries to exit.
-    if event.type == QUIT:
-      pygame.quit() # Opposite of pygame.init
-      sys.exit() # Not including this line crashes the script on Windows. Possibly
-      # on other operating systems too, but I don't know for sure.
-    # Handle other events as you wish.
- 
-def draw(screen):
-  """
-  Draw things to the window. Called once per frame.
-  """
-  screen.fill((0, 0, 0)) # Fill the screen with black.
-  
-  # Redraw screen here.
-  
-  # Flip the display so that the things we drew actually show up.
-  pygame.display.flip()
- 
-def runPyGame():
-  # Initialise PyGame.
-  pygame.init()
-  
-  # Set up the clock. This will tick every frame and thus maintain a relatively constant framerate. Hopefully.
-  fps = 60.0
-  fpsClock = pygame.time.Clock()
-  
-  # Set up the window.
-  width, height = 640, 480
-  screen = pygame.display.set_mode((width, height))
-  
-  # screen is the surface representing the window.
-  # PyGame surfaces can be thought of as screen sections that you can draw onto.
-  # You can also draw surfaces onto other surfaces, rotate surfaces, and transform surfaces.
-  
-  # Main game loop.
-  dt = 1/fps # dt is the time since last frame.
-  while True: # Loop forever!
-    update(dt) # You can update/draw here, I've just moved the code for neatness.
-    draw(screen)
-    
-    dt = fpsClock.tick(fps)
+
+if not pygame.font: print("Warning, fonts disabled")
+if not pygame.mixer: print("Warning, sound disabled")
+
+
+class CheckersMain:
+    "Runs the game and intializes it"
+    def __init__(self, width = 640, height = 480):
+        "intialize"
+        "intialize pygame"
+        pygame.init()
+        "Set window size"
+        self.width = width
+        self.height = height
+        "Create the Screen"
+        self.screen = pygame.display.set_mode((self.width, self.height))
+
+    def event_loop(self):
+        """Here the actual actions/events occur, such as
+        selecting pieces and the resulting effect"""
+
+        pass
+
+    def update(self):
+        "Updates the appearence of the board"
+
+        pass
+
+    def end_game(self):
+        "Quits program to end the game"
+        pygame.quit()
+        sys.exit
+        pass
+
+    def main_loop(self):
+        """Executes game and searches for endgame
+        occurrence to intialize end_game"""
+
+        pass
+
+    def end_turn(self):
+        "Ends turn of the player and switches player"
+
+        pass
+        
+
+if __name__ == "__main__":
+    MainWindow = CheckersMain()
+    MainWindow.MainLoop()
