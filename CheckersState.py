@@ -5,16 +5,16 @@ Authors: Oscar De La Garza & Yehya Albakri
 """
 
 #Pieces defined in terms of constants (would have to be enumerated for implementation)
-white = 0
+red = 0
 black = 1
 board_width = 8
 board_height = 8
-white_piece = 2
+red_piece = 2
 black_piece = 3
-white_king = 4
+red_king = 4
 black_king = 5
 empty_spot = 6
-white_pieces = [white_piece, white_king]
+red_pieces = [red_piece, red_king]
 black_pieces = [black_piece, black_king]
 
 class Board:
@@ -25,9 +25,9 @@ class Board:
             turns: indidcate what players turn it is
             spaces: 2-dimensional list of all the spaces on the board
             black_piece_moved: show if a black piece moved
-            white_piece_moved: show if a white piece moved
+            red_piece_moved: show if a red piece moved
             black_king_moved: show if a black king moved
-            white_king_moved: show if a white kind moved
+            red_king_moved: show if a red king moved
         """
 
         def __init__(self):
