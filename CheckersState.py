@@ -81,6 +81,7 @@ class Board:
             """
             Create a callable list to keep track of how many captured pieces each player has
             """
+            pass 
         
         def move(self, start_row, start_column, end_row, end_column):
             """
