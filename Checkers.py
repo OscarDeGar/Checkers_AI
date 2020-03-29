@@ -28,16 +28,15 @@ class CheckersMain:
         self.height = height
         "Create the Screen"
         self.screen = pygame.display.set_mode((self.width, self.height))
-
+        pass 
+    
     def event_loop(self):
         """Here the actual actions/events occur, such as
         selecting pieces and the resulting effect"""
-
         pass
 
     def update(self):
         "Updates the appearence of the board"
-
         pass
 
     def end_game(self):
@@ -49,15 +48,8 @@ class CheckersMain:
     def main_loop(self):
         """Executes game and searches for endgame
         occurrence to intialize end_game"""
-
         pass
 
     def end_turn(self):
         "Ends turn of the player and switches player"
-
         pass
-
-
-if __name__ == "__main__":
-    MainWindow = CheckersMain()
-    MainWindow.MainLoop()
