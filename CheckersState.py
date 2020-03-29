@@ -49,6 +49,7 @@ class Board:
             # Place pieces into corresponding black squares for the end_game
 
             # Create Textbox/area for messages and information to be displayed
+            pass
 
         def possible_moves(self, row, column):
             """
@@ -69,11 +70,12 @@ class Board:
             # Check for if the square is empty or outside the 8x8 range and
             # return "No piece or outside of the board, please select on of your pieces"
 
-            # Check to see if a normal checker piece or a queen for possible movements
+            # Check to see if a normal checker piece or a king for possible movements
 
             # Differneiate whether a capture or movement solely
 
             # Add a form to check for double+ jumps from capturing multiple Pieces
+            pass
 
         def captured_pieces(self):
             """
@@ -81,7 +83,8 @@ class Board:
             
             A list will be made for each player.
             """
-
+            pass
+        
         def move(self, start_row, start_column, end_row, end_column):
             """
             Compares the inputted moves to the legal moves of the selected piece
@@ -104,3 +107,4 @@ class Board:
             # nature od 2 diagonal spaces were hopped to checker
 
             # If piece was captured make space empty and add to counter of captured pieces
+            pass
