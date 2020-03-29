@@ -15,3 +15,5 @@
 
     pip install pygame
  #### After having downloaded the implementation will be up to you, feel free to download a copy and make your own ideas from this framework
+
+##### authors: Oscar De La Garza & Yehya Albakri
