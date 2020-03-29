@@ -79,11 +79,8 @@ class Board:
 
         def captured_pieces(self):
             """
-            Create a callable list to keep track of captured pieces
-            
-            A list will be made for each player.
+            Create a callable list to keep track of how many captured pieces each player has
             """
-            pass
         
         def move(self, start_row, start_column, end_row, end_column):
             """
