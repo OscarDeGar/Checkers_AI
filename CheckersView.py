@@ -20,7 +20,8 @@ class CheckersView:
             board: the board being represented
         """
         self.board = board
-
+        pass
+    
     def picture(self):
         """
         pictures the board for you to see
